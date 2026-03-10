@@ -4,7 +4,7 @@ using Demo_Db.Models;
 
 namespace Demo_Db.ApplicationLayer;
 
-public class ApplicationService
+public class ApplicationService:IApplicationService
 {
     private  DataOpreations _dataOpp;
 
