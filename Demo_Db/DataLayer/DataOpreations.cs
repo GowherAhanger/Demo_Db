@@ -4,11 +4,11 @@ using Demo_Db.DataSouce;
 
 public class DataOpreations:IDataOperations
 {
-    private DummyData _dummyData;
+    private readonly IDummyData _dummyData;
 
-    public DataOpreations()
+    public DataOpreations(IDummyData dummyData)
     {
-        _dummyData = new DummyData();
+        _dummyData = dummyData;
     }
 
     public IQueryable<User> GetUsers()

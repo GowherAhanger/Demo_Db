@@ -2,10 +2,11 @@ namespace Demo_Db.DataSouce;
 using Demo_Db.Models;
 using System.Collections.Generic;
 
-public class DummyData
+public class DummyData:IDummyData
 {
 
-    public List<User> Users = new List<User>()
+    
+    public List<User> Users { get; } = new List<User>()
     {
         new User { UserId = 1, User_Name = "Ali" },
         new User { UserId = 2, User_Name = "Ayesha" },
@@ -65,8 +66,8 @@ public class DummyData
     };
 
     // 🔹 50 PRODUCTS
-    public  List<Product> Products = new()
-    {
+
+    public List<Product> Products { get; } = new()    {
         new Product { Product_Id = 1, Product_Name = "Laptop" },
         new Product { Product_Id = 2, Product_Name = "Mouse" },
         new Product { Product_Id = 3, Product_Name = "Keyboard" },
@@ -123,7 +124,7 @@ public class DummyData
         new Product { Product_Id = 50, Product_Name = "IoT Sensor" }
     };
 
-    public List<Order> Orders = new()
+     public List<Order> Orders { get; } = new()
 {
     new Order { Id = 1, UserId = 1, ProductId = 1, Quantity = 1, Amount = 100 },
     new Order { Id = 2, UserId = 2, ProductId = 2, Quantity = 2, Amount = 200 },
@@ -178,7 +179,6 @@ public class DummyData
     new Order { Id = 47, UserId = 47, ProductId = 47, Quantity = 4, Amount = 400 },
     new Order { Id = 48, UserId = 48, ProductId = 48, Quantity = 2, Amount = 200 },
     new Order { Id = 49, UserId = 49, ProductId = 49, Quantity = 3, Amount = 300 },
-    new Order { Id = 50, UserId = 50, ProductId = 50, Quantity = 5, Amount = 500 },
-};
-   
+    new Order { Id = 50, UserId = 50, ProductId = 50, Quantity = 5, Amount = 500 }
+    };
 }

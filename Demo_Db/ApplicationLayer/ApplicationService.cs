@@ -6,12 +6,12 @@ namespace Demo_Db.ApplicationLayer;
 
 public class ApplicationService:IApplicationService
 {
-    private  DataOpreations _dataOpp;
+   private readonly IDataOperations _dataOpp;
 
-    public ApplicationService(DataOpreations dataOpp)
-    {
-        this._dataOpp = dataOpp;
-    }
+public ApplicationService(IDataOperations dataOpp)
+{
+    _dataOpp = dataOpp;
+}
     //Get All Products.............................................
     public IEnumerable<string> GetProductNames()
     {
