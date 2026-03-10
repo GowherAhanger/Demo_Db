@@ -2,7 +2,7 @@ namespace Demo_Db.DataLayer;
 using Demo_Db.Models;
 using Demo_Db.DataSouce;
 
-public class DataOpreations
+public class DataOpreations:IDataOperations
 {
     private DummyData _dummyData;
 
